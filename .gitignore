@@ -1,0 +1,7 @@
+settings.py
+manage.py
+db.sqlite3
+wsgi.py
+**/migrations
+**/__pycache__
+**/.vscode
