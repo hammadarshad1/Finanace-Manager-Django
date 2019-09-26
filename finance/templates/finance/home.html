@@ -4,10 +4,12 @@
   <br>
   <button class="btn btn-info" id="cash">Show Cash</button>
   <button class="btn btn-info" id="check">Show Checks</button>
+  <hr>
   <table id="forCash">
   </table>
   <table id="forCheck">
   </table>
+  <hr>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
     $(document).ready(function(){
@@ -51,7 +53,7 @@
                 $("#forCash").append("<th>S.no</th><th>Title</th><th>Amount</th>")
                  for(var i=cash.length-1; i >= 0; i--)
                  {
-                   $("#forCash").append("<tr><td>"+(i+1)+"</td><td>"+ cash[i].fields["title"] +"</td><td>"+ cash[i].fields["Cash"] +"</td></tr>")
+                   $("#forCash").append("<tr><td>"+(i+1)+"</td><td><b>"+ cash[i].fields["title"] +"</b></td><td>"+ cash[i].fields["Cash"] +"</td></tr>")
                    total += cash[i].fields["Cash"]
                  }
                  $("#forCash").append("<tr><td>-------------</td><td>-------------</td><td>"+"<b>Total=</b>"+total+"</td></tr>")
@@ -80,10 +82,10 @@
           $("#forCheck").append("<th>S.no</th><th>Title</th><th>Amount</th><th>Acc. No</th>")
           for(var i=check.length-1; i >= 0; i--)
           {
-            $("#forCheck").append("<tr><td>"+ (i+1) +"</td><td>"+ check[i].fields["title"] +"</td><td>"+ check[i].fields["Check"] +"</td><td>"+ check[i].fields["Account_number"] +"</td></tr>")
+            $("#forCheck").append("<tr><td>"+ (i+1) +"</td><td><b>"+ check[i].fields["title"] +"</b></td><td>"+ check[i].fields["Check"] +"</td><td>"+ check[i].fields["Account_number"] +"</td></tr>")
             total += check[i].fields["Check"]
           }
-          $("#forCheck").append("<tr><td>-------------</td><td>-------------</td><td>"+"<b>Total=</b>"+total+"</td><td>-------------</td></tr>")
+          $("#forCheck").append("<tr><td>-------------</td><td>-------------</td><td>"+"<b>Total= Rs</b>"+total+"</td><td>-------------</td></tr>")
         })
       });
 
