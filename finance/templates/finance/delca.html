@@ -1,0 +1,17 @@
+{% extends 'finance/base.html' %}
+{% block content %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div style="width:20%;">
+
+    <table border = "3" >
+      {% for cashs in cash %}
+           <tr>
+              <td>{{ cashs.title }}</td>
+              <td>{{ cashs.Cash }}</td>
+              <td style="width:2%"><a href="{% url 'cash-delete' cashs.id %}"><button class="btn"><i class="fa fa-trash"></i></button></td>
+           </tr>
+      {% endfor %}
+    </table>
+
+  </div>
+{% endblock %}
