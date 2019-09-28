@@ -115,6 +115,15 @@
         <a href="{% url 'home' %}" class="navbar-brand ml-2">Finance</a>
         <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+        <div class="dropdown">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+    +
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="{% url 'cash' %}">Add Cash</a>
+    <a class="dropdown-item" href="{% url 'check' %}">Add Check</a>
+  </div>
+</div>
       </div>
     </div>
 </nav>

@@ -23,11 +23,11 @@ def about(request):
 
 def delca(request):
     cash = models.Cash.objects.all()
-    return render(request, 'finance/delca.html',{'cash':cash})
+    return render(request, 'finance/delca.html',{'cash':cash[::-1]})
 
 def delch(request):
     check = models.Check.objects.all()
-    return render(request, 'finance/delch.html',{'check':check})
+    return render(request, 'finance/delch.html',{'check':check[::-1]})
 
 class Cash(CreateView):
     model = models.Cash
