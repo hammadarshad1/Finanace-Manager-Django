@@ -7,7 +7,6 @@ from . import models
 from django.contrib import messages
 
 
-
 # Create your views here.
 def home(request):
     cash = models.Cash.objects.all()

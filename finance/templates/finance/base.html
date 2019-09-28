@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -115,15 +116,25 @@
         <a href="{% url 'home' %}" class="navbar-brand ml-2">Finance</a>
         <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-        <div class="dropdown">
+        <div class="dropdown" id="drop">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
     +
   </button>
-  <div class="dropdown-menu">
+  <div class="dropdown-menu" id="dropmnu">
     <a class="dropdown-item" href="{% url 'cash' %}">Add Cash</a>
     <a class="dropdown-item" href="{% url 'check' %}">Add Check</a>
   </div>
 </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#drop").mouseenter(function(){
+      $("#dropmnu").slideDown(100);
+    });
+    $("#drop").mouseleave(function(){
+      $("#dropmnu").slideUp(100);
+    });
+  });
+</script>
       </div>
     </div>
 </nav>
