@@ -145,10 +145,22 @@
     {% block content %} {% endblock %}
 
     <div class="footer">
-      <p>@Copyrights by: Mousab</p>
+      <p id="typing"></p>
     </div>
 
+<script type="text/javascript">
+var i = 0;
+var txt = '@Copyrights by: Mousab'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
 
+function typeWriter() {
+if (i < txt.length) {
+  document.getElementById("typing").innerHTML += txt.charAt(i);
+  i++;
+  setTimeout(typeWriter, speed);
+}
+}
+</script>
 
 
     <!-- Optional JavaScript -->

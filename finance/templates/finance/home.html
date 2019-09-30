@@ -1,7 +1,6 @@
 {% extends 'finance/base.html' %}
 {% block content %}
 
-
   <br>
   <button class="btn btn-info" id="cash">Show Cash</button>
   <button class="btn btn-success" id="check">Show Checks</button>
@@ -79,7 +78,7 @@
         total = 0
         $("#forCheck").empty()
         $("#forCheck").append("<th>S.no</th><th>Title</th><th>Amount</th><th>Acc. No</th>")
-        for(var i=check.length-1; i >= 0; i--)
+        for(var i=check.length-1; i>=0; i--)
         {
           $("#forCheck").append("<tr><td>"+ (i+1) +"</td><td><b>"+ check[i].fields["title"] +"</b></td><td>"+ check[i].fields["Check"] +"</td><td>"+ check[i].fields["Account_number"] +"</td></tr>")
           total += check[i].fields["Check"]

@@ -9,7 +9,7 @@
                 <td>{{ checks.title }}</td>
                 <td>{{ checks.Check }}</td>
                 <td>{{ checks.Account_number }}</td>
-                <td style="width:2%"><a href="{% url 'cash-delete' cashs.id %}"><button class="btn"><i class="fa fa-trash"></i></button></td>
+                <td style="width:2%"><a href="{% url 'check-delete' checks.id %}"><button class="btn"><i class="fa fa-trash"></i></button></td>
              </tr>
         {% endfor %}
       </table>
